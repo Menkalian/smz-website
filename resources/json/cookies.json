@@ -1,0 +1,12 @@
+[
+  {
+    "name" : "hasConsent",
+    "type" : "essential",
+    "description" : "Speichert ob den Cookies zugestimmt wurde oder nicht."
+  },
+  {
+    "name" : "cookieSettings",
+    "type" : "essential",
+    "description" : "Speichert welchen Cookies zugestimmt wurde."
+  }
+]

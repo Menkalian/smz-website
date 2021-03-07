@@ -1,0 +1,6 @@
+/* General definitions */
+@import "config/color-def.css";
+@import "config/length-def.css";
+
+/* Configurations. Might be adjusted by target */
+@import "config/cookienotice-config.css";

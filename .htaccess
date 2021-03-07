@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule ^(.*)$ https://spielmannszug.menkalian.de/$1 [R=301,L]
+
+DefaultIcon resources/images/icon.gif
+DirectoryIndex index.php

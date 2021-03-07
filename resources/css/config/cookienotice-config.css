@@ -1,0 +1,40 @@
+/* Base Layout*/
+:root {
+    --cookienotice-min-width        : 25rem;
+    --cookienotice-width            : 30%;
+
+    --cookienotice-padding          : 1.2rem;
+
+    --cookienotice-distance         : 2rem;
+    --cookienotice-distance-left    : var(--cookienotice-distance);
+    --cookienotice-distance-bottom  : var(--cookienotice-distance);
+
+    --cookienotice-border-width     : 0.4rem;
+    --cookienotice-border-radius    : 2rem;
+    --cookienotice-border-color     : var(--color-primary);
+
+    --cookienotice-background-color : var(--color-background);
+    --cookienotice-font-size        : medium;
+}
+
+/* Switches */
+:root {
+    --cookienotice-switch-height          : 1rem;
+
+    --cookienotice-switch-indent          : 0.2rem;
+    --cookienotice-switch-distance        : 1rem;
+    --cookienotice-switch-distance-top    : calc(0.5 * var(--cookienotice-switch-distance));
+    --cookienotice-switch-distance-bottom : calc(0.5 * var(--cookienotice-switch-distance));
+}
+
+/* Accept-button */
+:root {
+    --cookienotice-button-padding-horizontal : 1.5rem;
+    --cookienotice-button-padding-vertical   : 0.1rem;
+    --cookienotice-button-right-distance     : 1rem;
+
+    --cookienotice-button-border-radius      : 1rem;
+    --cookienotice-button-background-color   : var(--color-positive-background);
+    --cookienotice-button-font-color         : var(--color-positive);
+    --cookienotice-button-font-size          : large;
+}

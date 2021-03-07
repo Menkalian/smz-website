@@ -1,0 +1,53 @@
+@import "formElements/toggleSwitch.css";
+
+#cookies-eu-banner {
+    /* BASE styling */
+    display       : none;
+    position      : fixed;
+    z-index       : 9;
+    border-style  : solid;
+
+    /* Configurable */
+    min-width     : var(--cookienotice-min-width);
+    width         : var(--cookienotice-width);
+    bottom        : var(--cookienotice-distance-bottom);
+    left          : var(--cookienotice-distance-left);
+    border-width  : var(--cookienotice-border-width);
+    border-color  : var(--cookienotice-border-color);
+    background    : var(--cookienotice-background-color);
+    padding       : var(--cookienotice-padding);
+    border-radius : var(--cookienotice-border-radius);
+    font-size     : var(--cookienotice-font-size);
+}
+
+#cookies-eu-banner ul {
+    /* BASE styling */
+    list-style                    : none;
+
+    /* Configurable */
+    padding-left                  : var(--cookienotice-switch-indent);
+    margin-top                    : var(--cookienotice-switch-distance-top);
+    margin-bottom                 : var(--cookienotice-switch-distance-bottom);
+    --base-height-control-element : var(--cookienotice-switch-height);
+}
+
+/*noinspection CssReplaceWithShorthandSafely*/
+#cookies-eu-accept {
+    /* BASE styling */
+    display          : block;
+    margin           : auto;
+    border-style     : none;
+
+    /* Configurable */
+    margin-right     : var(--cookienotice-button-right-distance);
+    padding          : var(--cookienotice-button-padding-vertical) var(--cookienotice-button-padding-horizontal);
+
+    background-color : var(--cookienotice-button-background-color);
+    color            : var(--cookienotice-button-font-color);
+    font-size        : var(--cookienotice-button-font-size);
+    border-radius    : var(--cookienotice-border-radius);
+}
+
+#cookies-eu-accept:hover {
+    cursor : pointer;
+}
