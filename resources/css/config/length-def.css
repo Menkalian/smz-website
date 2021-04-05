@@ -1,4 +1,12 @@
 :root {
-    --base-height-control-element : 1.5rem
+    --height-navbar          : 3rem;
+    --width-content          : 80%;
 
+    --distance-navbar-top    : 0.5rem;
+
+    --default-border-radius  : 1.3rem;
+
+    --height-control-element : 1.5rem;
+
+    --navbar-font-size       : 1.8rem;
 }

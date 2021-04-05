@@ -1,11 +1,11 @@
 .switch {
     position : relative;
     display  : inline-block;
-    width    : calc(1.923 * var(--base-height-control-element));
-    height   : var(--base-height-control-element);
+    width    : calc(1.923 * var(--height-control-element));
+    height   : var(--height-control-element);
 
     --slider-padding : 0.15rem;
-    --slider-size    : calc(var(--base-height-control-element) - 2 * var(--slider-padding));
+    --slider-size    : calc(var(--height-control-element) - 2 * var(--slider-padding));
 }
 
 /* Hide default HTML checkbox */
@@ -17,7 +17,7 @@
 
 /* The slider */
 .slider {
-    border-radius      : var(--base-height-control-element);
+    border-radius      : var(--height-control-element);
     position           : absolute;
     cursor             : pointer;
     top                : 0;

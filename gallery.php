@@ -17,7 +17,7 @@
     homeMenu();
 ?>
 <div id="content">
-    <h1>Die Bildergallerie</h1>
+    <h1>Die Bildergalerie</h1>
     <?php
         createGalleryContainer() ?>
 </div>

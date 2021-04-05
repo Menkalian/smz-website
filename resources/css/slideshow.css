@@ -21,6 +21,7 @@
     max-height : 100%;
 }
 
+/*noinspection CssUnusedSymbol*/
 .slide-active {
     display : flex;
 }
@@ -56,7 +57,7 @@
     padding        : 1.5rem 1.8rem;
     position       : absolute;
     bottom         : 1.5rem;
-    width          : 100%;
+    width          : 95%;
     text-align     : center;
     display        : flex;
     flex-direction : column;

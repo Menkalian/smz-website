@@ -1,5 +1,5 @@
-var convenienceAllowed = false
-var onConvenienceListeners = []
+let convenienceAllowed = false
+let onConvenienceListeners = []
 
 function requestCookie() {
     new CookiesEuBanner(function () {
@@ -14,10 +14,13 @@ function requestCookie() {
             cookieSettings = JSON.parse(Cookies.get("cookieSettings"));
         }
 
-        if(cookieSettings.convenience) {
+        if (!cookieSettings.essential) {
+            console.log("Hey. I know you can manipulate UI-Inputs and cookies, but his value is not checked anyway. So have fun :P.")
+        }
+        if (cookieSettings.convenience) {
             allowConvenience();
         }
-        if(cookieSettings.facebook) {
+        if (cookieSettings.facebook) {
             activateFacebookIntegration();
         }
 

@@ -1,31 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Spielmannszug Frammersbach</title>
+    <?php
+        include_once "../resources/php/util.php";
+        include_once "../resources/php/form-util.php";
 
-    <link rel="icon" href="resources/images/icon.gif">
-    <link rel="stylesheet" href="resources/css/uikit.css">
-    <link rel="stylesheet" href="resources/css/uikit.smz-theme.css">
-
-    <script src="resources/js/uikit.js"></script>
+        commonHead();
+    ?>
+    <title>Impressum Spielmannszug Frammersbach</title>
 </head>
-<body>
-<nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
-        <ul class="uk-navbar-nav">
-            <li><a href="#" class="uk-active">Home</a></li>
-            <li><a href="https://de-de.facebook.com/SpielmannszugFrammersbach/">Facebook</a></li>
-        </ul>
-    </div>
-    <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
-            <li><a href="Index.php">Impressum</a></li>
-            <li><a href="Index.php">Datenschutz</a></li>
-        </ul>
-    </div>
-</nav>
-<div>
+<body onload='requestCookie()'>
+<a id="top"></a>
+<?php
+    cookieRequest();
+    homeMenu("IMPRESS");
+?>
+<div id="content">
     <h1>Impressum</h1>
 
     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
@@ -77,7 +67,8 @@
        von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
 
     <p>Quelle: <a href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-generator.html</a></p>
+
+    <p><a href="#top">&#708; Zum Beginn der Seite</a></p>
 </div>
-<a href="" uk-totop uk-scroll></a>
 </body>
 </html>

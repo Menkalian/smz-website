@@ -28,7 +28,7 @@
     padding-left                  : var(--cookienotice-switch-indent);
     margin-top                    : var(--cookienotice-switch-distance-top);
     margin-bottom                 : var(--cookienotice-switch-distance-bottom);
-    --base-height-control-element : var(--cookienotice-switch-height);
+    --height-control-element : var(--cookienotice-switch-height);
 }
 
 /*noinspection CssReplaceWithShorthandSafely*/
