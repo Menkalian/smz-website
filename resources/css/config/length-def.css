@@ -1,6 +1,7 @@
 :root {
     --height-navbar          : 3rem;
     --width-content          : 80%;
+    --padding-content-horiz  : 0.5rem;
 
     --distance-navbar-top    : 0.5rem;
 

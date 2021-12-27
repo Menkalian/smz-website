@@ -20,7 +20,8 @@
         }
         }
 
-    class post {
+    class post
+        {
         public $date;
         public $title;
         public $thumbnail;
@@ -29,14 +30,33 @@
 
         public function __construct($json_obj)
         {
-            $this->date = date_create($json_obj->date, new DateTimeZone("CET"));
-            $this->title = $json_obj->title;
+            $this->date      = date_create($json_obj->date, new DateTimeZone("CET"));
+            $this->title     = $json_obj->title;
             $this->thumbnail = $json_obj->thumbnail;
-            $this->text = $json_obj->text;
+            $this->text      = $json_obj->text;
 
             foreach ($json_obj->images as $img_json) {
                 $this->images[] = new post_image($img_json);
             }
+        }
+        }
+
+    class gallery_entry
+        {
+        public $text;
+        public $image;
+        public $link;
+
+        /**
+         * @param $text
+         * @param $image
+         * @param $link
+         */
+        public function __construct($text, $image, $link)
+        {
+            $this->text  = $text;
+            $this->image = $image;
+            $this->link  = $link;
         }
         }
 
@@ -46,23 +66,36 @@
         include_js("slideshow.js");
     }
 
-    function create_gallery_container()
+    /**
+     * @param $entries gallery_entry[]
+     *
+     * @return void
+     */
+    function create_gallery_container($entries)
     {
         echo "<div class='slideshow-container'>";
-        var_dump(new post(load_json("articles/holzmarkt_2021.json")));
+        $count = count($entries);
+        $inc   = 0;
 
-        $gallery_object = load_json("gallery.json");
-        $count         = count($gallery_object);
-        $inc           = 0;
+        foreach ($entries as $entry) {
+            echo "<div class='slide fade'>";
 
-        foreach ($gallery_object as $item) {
-            echo "
-            <div class='slide fade'>
-                <div class='numbertext'>" . (++$inc) . " / $count</div>
-                <img src='" . absolute_resource("resources/images/content/image_gallery/" . $item->file) . "' alt='" . $item->description . "'>
-                <div class='caption'><span>" . $item->description . "</span></div>
-            </div>
-            ";
+
+            echo "<div class='numbertext' > " . (++$inc) . " / $count</div >";
+
+            if (strlen($entry->link) > 0) {
+                echo "<a href=" . $entry->link . ">";
+            }
+            echo "<img src = '" . absolute_resource("resources/images/content/image_gallery/" . $entry->image) . "' alt = '" . $entry->text . "' >";
+            if (strlen($entry->link) > 0) {
+                echo "</a>";
+            }
+
+            if (strlen($entry->text) > 0) {
+                echo "<div class='caption' ><span > " . $entry->text . "</span ></div >";
+            }
+
+            echo "</div>";
         }
 
         // Next and previous

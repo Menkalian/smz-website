@@ -3,9 +3,11 @@
 <head>
     <?php
         include_once "resources/php/util.php";
+        include_once "resources/php/image-gallery.php";
         include_once "resources/php/form-util.php";
 
         common_head();
+        gallery_headers();
     ?>
     <title>Spielmannszug Frammersbach</title>
 </head>
@@ -15,11 +17,22 @@
     home_menu("HOME");
 ?>
 <div id="content">
-    <h1>Wir sind spielbereit! #restartblasmusik</h1>
-    <img src="<?php
-        echo absolute_resource("resources/images/content/countdown.jpg"); ?>"
-         alt="Der Countdown läuft - wir sind spielbereit! #restartblasmusik Spielmannszug Frammersbach"
-         class="fitimage" style="width: 80%">
+    <h1>Neuigkeiten von uns</h1>
+    <?php
+        $entries = array();
+        $all_articles = load_json("aggregated.json");
+        $len = count($all_articles);
+
+        for( $i = 1; $i <= 5 ; $i++) {
+            $article = $all_articles[$len - $i];
+            if ($article == null)
+                break;
+
+            $entries[] = new gallery_entry($article->title, $article->thumbnail, absolute_resource("post.php?post=" . $article->name));
+        }
+
+        create_gallery_container($entries);
+    ?>
 
     <h1>Wir sind auch auf Facebook</h1>
     <div class="facebook-container"

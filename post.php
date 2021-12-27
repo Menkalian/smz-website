@@ -20,15 +20,35 @@
     <?php
         # Load JSON for the requested post
         $postname = $_GET["post"];
-        if (!isset($_GET["post"]) || preg_match("[a-zA-Z\\-_\\/]+", $postname) == false) {
+        if (!isset($_GET["post"]) || preg_match("/[a-zA-Z0-9\\-_\\/]+/", $postname) == false) {
             echo "<p class='error'>Dieser Inhalt konnte nicht gefunden werden. Versuchen Sie es doch einmal im <a href='archive.php'>Archiv</a> oder auf der <a href='index.php'>Startseite</a>.</p>";
             http_response_code(403);
             exit();
         }
+
+        if (!file_exists("resources/json/articles/" . $_GET["post"] . ".json")){
+            echo "<p class='error'>Dieser Inhalt konnte nicht gefunden werden. Versuchen Sie es doch einmal im <a href='archive.php'>Archiv</a> oder auf der <a href='index.php'>Startseite</a>.</p>";
+            http_response_code(400);
+            exit();
+        }
+
+        $post_object = new post(load_json("articles/" . $_GET["post"] . ".json"));
+
     ?>
-    <h1>Die Bildergalerie</h1>
+    <h1><?php
+            echo $post_object->title; ?></h1>
     <?php
-        create_gallery_container() ?>
+        $entries = array();
+
+        $entries[] = new gallery_entry("", $post_object->thumbnail, "");
+        foreach ($post_object->images as $image) {
+            $entries[] = new gallery_entry($image->text, $image->img, "");
+        }
+
+        create_gallery_container($entries);
+
+        echo "<p>" . $post_object->text . "</p>"
+    ?>
 </div>
 </body>
 </html>

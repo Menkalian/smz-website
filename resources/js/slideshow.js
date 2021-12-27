@@ -1,5 +1,5 @@
 let slideIndex = 0;
-document.addEventListener("load", () => {
+window.addEventListener("load", () => {
     showSlide(0)
 })
 

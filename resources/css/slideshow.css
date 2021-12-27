@@ -15,10 +15,16 @@
     background : #E0E0E0E0;
 }
 
+.slide a {
+    display : flex;
+    width   : 100%;
+}
+
 .slide img {
     margin     : auto;
-    max-width  : 100%;
-    max-height : 100%;
+    /* 100% funktioniert nicht. Danke Chrome... */
+    max-width  : 99.9%;
+    max-height : 99.9%;
 }
 
 /*noinspection CssUnusedSymbol*/

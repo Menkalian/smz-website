@@ -127,7 +127,7 @@ a {
 #content {
     display        : flex;
     min-height     : 100%;
-    width          : var(--width-content);
+    width          : calc(var(--width-content) - (2 * var(--padding-content-horiz)));
     min-width      : min-content;
     margin         : 5rem auto 2rem;
     background     : var(--color-background);
@@ -135,7 +135,7 @@ a {
     border-color   : var(--color-primary);
     border-radius  : var(--default-border-radius);
     border-width   : var(--default-border-width);
-    padding        : 1rem 0;
+    padding        : 1rem var(--padding-content-horiz);
     flex-direction : column;
 }
 
