@@ -14,6 +14,7 @@
 <body onload='requestCookie();showSlide(0)'>
 <?php
     cookie_request();
+    settings_menu();
     home_menu();
 ?>
 <div id="content">

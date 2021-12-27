@@ -14,6 +14,7 @@
 <body onload='requestCookie()'>
 <?php
     cookie_request();
+    settings_menu();
     home_menu("HOME");
 ?>
 <div id="content">

@@ -7,7 +7,7 @@ function requestCookie() {
         if (Cookies.get("cookieSettings") === undefined) {
             cookieSettings = Object()
             cookieSettings.essential = document.getElementById("cookies-eu-essential").checked
-            cookieSettings.convenience = document.getElementById("cookies-eu-convenience").checked
+            //cookieSettings.convenience = document.getElementById("cookies-eu-convenience").checked
             cookieSettings.facebook = document.getElementById("cookies-eu-facebook").checked
             Cookies.set("cookieSettings", JSON.stringify(cookieSettings), "SameSite=Lax")
         } else {
@@ -15,11 +15,11 @@ function requestCookie() {
         }
 
         if (!cookieSettings.essential) {
-            console.log("Hey. I know you can manipulate UI-Inputs and cookies, but his value is not checked anyway. So have fun :P.")
+            console.log("Hey. I know you can manipulate UI-Inputs and cookies, but his value is not used anyway. So have fun :P.")
         }
-        if (cookieSettings.convenience) {
-            allowConvenience();
-        }
+        // if (cookieSettings.convenience) {
+        //     allowConvenience();
+        // }
         if (cookieSettings.facebook) {
             activateFacebookIntegration();
         }
@@ -36,13 +36,13 @@ function colorswitch(id) {
     element.setAttribute("src", otherSource)
 }
 
-function allowConvenience() {
-    convenienceAllowed = true
-
-    for (let i = 0 ; i < onConvenienceListeners.length ; i++) {
-        onConvenienceListeners[i]()
-    }
-}
+// function allowConvenience() {
+//     convenienceAllowed = true
+//
+//     for (let i = 0 ; i < onConvenienceListeners.length ; i++) {
+//         onConvenienceListeners[i]()
+//     }
+// }
 
 function activateFacebookIntegration() {
     let facebookContainers = document.getElementsByClassName("facebook-container");

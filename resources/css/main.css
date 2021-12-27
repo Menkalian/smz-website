@@ -78,9 +78,9 @@ nav a {
 }
 
 nav .active {
-    font-style : italic;
-    text-decoration: underline;
-    text-decoration-color: var(--color-primary);
+    font-style            : italic;
+    text-decoration       : underline;
+    text-decoration-color : var(--color-primary);
 }
 
 nav a:hover {
@@ -157,11 +157,30 @@ a {
 }
 
 .legal-text {
-    text-align: justify;
-    padding: 0 4rem;
+    text-align : justify;
+    padding    : 0 4rem;
 }
 
 .legal-text address, .legal-text p {
-    margin: 0;
-    margin-top: 1rem;
+    margin     : 0;
+    margin-top : 1rem;
+}
+
+.archive {
+    border-collapse: collapse;
+}
+
+.archive thead {
+    font-size   : large;
+    font-weight : bold;
+    text-align  : center;
+    border-bottom: solid 0.2rem var(--color-structural);
+}
+
+.archive td:first-child {
+    padding : 0 1rem;
+    border-right: solid 0.2rem var(--color-structural);
+}
+.archive td:last-child {
+    padding : 0 1rem;
 }

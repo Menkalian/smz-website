@@ -13,6 +13,7 @@
 <a id="top"></a>
 <?php
     cookie_request();
+    settings_menu();
     home_menu("DATASEC");
 ?>
 <div id="content">

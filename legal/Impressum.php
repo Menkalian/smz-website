@@ -13,6 +13,7 @@
 <a id="top"></a>
 <?php
     cookie_request();
+    settings_menu();
     home_menu("IMPRESS");
 ?>
 <div id="content">

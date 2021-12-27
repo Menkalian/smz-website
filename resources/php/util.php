@@ -29,16 +29,17 @@
     function cookie_request()
     {
         echo "<div id='cookies-eu-banner'>";
-        echo "<p>Wir setzen auf dieser Seite Cookies ein, um die Nutzung angenehmer zu gestalten. Diese Auswahl kann jederzeit in den Einstellungen angepasst werden.</p>";
-        echo "<a href='" . absolute_resource("legal/datenschutz/_general_cookie_info.php") .
-             "' id='cookies-eu-more'>Weitere Infos zur Verwendung von Cookies</a><br>";
+        echo "<p>
+                Wir setzen auf dieser Seite Cookies ein, um die Nutzung angenehmer zu gestalten. Diese Auswahl kann jederzeit in den Einstellungen angepasst werden.<br>
+                Die eigenen Cookies dieser Webseite speichern nur Ihre Einstellungen auf dieser Webseite (Cookie-Zustimmung und Farbschema) und werden nicht zur Erstellung eines Benutzerprofils genutzt.<br>
+                Zu den Cookies der eingebetteten Seiten (z.B. Facebook) und deren Verwendungszweck informieren die jeweiligen Seiten.</p>";
 
         // Create Sliders
         echo "<ul><li>";
         create_slider("cookies-eu-essential", "Notwendige Cookies", true, false);
         echo "</li><li>";
-        create_slider("cookies-eu-convenience", "Cookies für eine verbesserte Nutzungserfahrung", true);
-        echo "</li><li>";
+//        create_slider("cookies-eu-convenience", "Cookies für eine verbesserte Nutzungserfahrung", true);
+//        echo "</li><li>";
         create_slider("cookies-eu-facebook", "(externe) Facebook Cookies", true);
         echo "</li></ul>";
 
@@ -46,6 +47,11 @@
         echo "<button id='cookies-eu-accept'>Auswahl bestätigen</button>";
 
         echo "</div>";
+    }
+
+    function settings_menu()
+    {
+
     }
 
     function home_menu($current = "NONE")
@@ -80,7 +86,7 @@
                 <div><a href='" . absolute_resource("legal/datenschutz/Datenschutz.php") . "' " . ($current == "DATASEC" ? "class='active'" : "") . ">Datenschutz</a></div>
                 <div>
                     <a href='' 
-                    onclick='open_settings();return false;'
+                    onclick='openSettings();return false;'
                     onmouseenter='colorswitch(\"menu-settings\")' 
                     onmouseleave='colorswitch(\"menu-settings\")'>
                         <img
