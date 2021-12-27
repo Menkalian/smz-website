@@ -1,5 +1,5 @@
 <?php
-    function createSlider($id, $description, $initial = false, $editable = true)
+    function create_slider($id, $description, $initial = false, $editable = true)
     {
         echo "<label><label class='switch'><input id='$id' type='checkbox' "
              . ($initial ? " checked" : "")

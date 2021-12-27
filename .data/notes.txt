@@ -1,0 +1,5 @@
+ - Abspeichern der "Posts" in JSON-Files
+
+# HOME -> 5 letzte/aktuellste Posts anzeigen (Thumbnail + Text + Link)
+# POST -> Darstellung des Posts
+# ARCHIV -> Darstellung aller Posts als Liste

@@ -5,19 +5,19 @@
         include_once "resources/php/util.php";
         include_once "resources/php/form-util.php";
 
-        commonHead();
+        common_head();
     ?>
     <title>Spielmannszug Frammersbach</title>
 </head>
 <body onload='requestCookie()'>
 <?php
-    cookieRequest();
-    homeMenu("HOME");
+    cookie_request();
+    home_menu("HOME");
 ?>
 <div id="content">
     <h1>Wir sind spielbereit! #restartblasmusik</h1>
     <img src="<?php
-        echo absoluteResource("resources/images/content/countdown.jpg"); ?>"
+        echo absolute_resource("resources/images/content/countdown.jpg"); ?>"
          alt="Der Countdown läuft - wir sind spielbereit! #restartblasmusik Spielmannszug Frammersbach"
          class="fitimage" style="width: 80%">
 
