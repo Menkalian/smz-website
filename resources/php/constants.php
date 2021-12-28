@@ -1,6 +1,8 @@
 <?php
     include_once "util.php";
 
+    const FORCE_HTTPS = false;
+
     $theme = !isset($_COOKIE["theme"]) ? 0 : safe_int($_COOKIE["theme"]);
 
     /**

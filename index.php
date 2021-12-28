@@ -20,20 +20,35 @@
 <div id="content">
     <h1>Neuigkeiten von uns</h1>
     <?php
-        $entries = array();
+        $entries      = array();
         $all_articles = load_json("aggregated.json");
-        $len = count($all_articles);
+        $len          = count($all_articles);
 
-        for( $i = 1; $i <= 5 ; $i++) {
-            $article = $all_articles[$len - $i];
-            if ($article == null)
+        for ($i = 1 ; $i <= 5 ; $i++) {
+            $article = $all_articles[ $len - $i ];
+            if ($article == null) {
                 break;
+            }
 
             $entries[] = new gallery_entry($article->title, $article->thumbnail, absolute_resource("post.php?post=" . $article->name));
         }
 
         create_gallery_container($entries);
     ?>
+
+    <h1>Weitere Inhalte auf der Website</h1>
+    <div class="legal-text">
+        <p>
+            Die bisherigen Neuigkeiten/Posts können im <a href="archive.php">Archiv</a> angesehen werden.<br>
+        </p>
+        <p>
+            Unsere Vereinsgeschichte wird <a href="post.php?post=history">hier</a> erzählt.<br>
+        </p>
+        <p>
+            Aufgrund von Corona gab es leider keine Terminliste für das Jahr 2021.<br>
+            Sobald es eine Terminliste für das Jahr 2022 gibt, wird diese hier verlinkt.
+        </p>
+    </div>
 
     <h1>Wir sind auch auf Facebook</h1>
     <div class="facebook-container"

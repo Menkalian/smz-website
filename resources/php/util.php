@@ -111,7 +111,7 @@
      */
     function absolute_resource($resource, $intern = false)
     {
-        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+        if ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || (FORCE_HTTPS && !$intern)) {
             $url = "https://";
         }
         else {
