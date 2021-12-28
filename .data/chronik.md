@@ -214,7 +214,7 @@ Die Saison 1980 bescherte dem Spielmannszug Frammersbach weitere interessante Au
 Zum Ende der Saison 1980 versuchten sich die Frammersbacher Spielleute zum ersten Mal als "Kirchenmusiker". 
 Anlässlich der Hochzeit zweier langjähriger Aktiven, Edith und Norbert, wirkte eine Bläsergruppe bei der musikalischen Gestaltung der Trauungsmesse mit, was sehr gut ankam.
 
-## Eine Änderung der musikalischen Richung (1981)
+## Eine Änderung der musikalischen Richtung (1981)
 Nachdem die Saison 1980 mit einem übervollen Terminkalender von über 30 Auftritten nicht nur erlebnisreiche, sondern auch anstrengende Wochenenden gebracht hatte, wurde bei der Terminplanung für **1981** auf mehr Freiraum geachtet.
 Die bayerischen Landesmeisterschaften am 3. Mai 1981 in RetzbachZellingen endeten für die Spielleute aus Frammersbach mit einer herben Enttäuschung.
 Enttäuscht waren die Frammersbacher nicht in erster Linie darüber, dass sie verloren hatten, sondern darüber, wie die Niederlage zustande gekommen war.
