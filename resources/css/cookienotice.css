@@ -51,3 +51,89 @@
 #cookies-eu-accept:hover {
     cursor : pointer;
 }
+
+#settings {
+    /* BASE styling */
+    display       : none;
+    position      : fixed;
+    z-index       : 9;
+    border-style  : solid;
+
+    /* Configurable */
+    min-width     : var(--cookienotice-min-width);
+    width         : var(--cookienotice-width);
+    bottom        : var(--cookienotice-distance-bottom);
+    left          : var(--cookienotice-distance-left);
+    border-width  : var(--cookienotice-border-width);
+    border-color  : var(--cookienotice-border-color);
+    background    : var(--cookienotice-background-color);
+    padding       : var(--cookienotice-padding);
+    border-radius : var(--cookienotice-border-radius);
+    font-size     : var(--cookienotice-font-size);
+}
+
+#settings ul {
+    /* BASE styling */
+    list-style                    : none;
+
+    /* Configurable */
+    padding-left                  : var(--cookienotice-switch-indent);
+    margin-top                    : var(--cookienotice-switch-distance-top);
+    margin-bottom                 : var(--cookienotice-switch-distance-bottom);
+    --height-control-element : var(--cookienotice-switch-height);
+}
+
+#settings-buttons {
+    /* BASE styling */
+    display      : flex;
+    margin       : auto;
+    border-style : none;
+    margin-right : var(--cookienotice-button-right-distance);
+    padding: 0;
+}
+
+#settings-buttons div {
+    flex-grow: 10;
+}
+
+/*noinspection CssReplaceWithShorthandSafely*/
+#settings-accept {
+    /* BASE styling */
+    display          : block;
+    margin           : auto;
+    border-style     : none;
+
+    /* Configurable */
+    margin-right     : 0;
+    padding          : var(--cookienotice-button-padding-vertical) var(--cookienotice-button-padding-horizontal);
+
+    background-color : var(--cookienotice-button-background-color);
+    color            : var(--cookienotice-button-font-color);
+    font-size        : var(--cookienotice-button-font-size);
+    border-radius    : var(--cookienotice-border-radius);
+}
+
+#settings-accept:hover {
+    cursor : pointer;
+}
+
+/*noinspection CssReplaceWithShorthandSafely*/
+#settings-reset {
+    /* BASE styling */
+    display          : block;
+    margin           : auto;
+    border-style     : none;
+
+    /* Configurable */
+    margin-right     : var(--cookienotice-button-right-distance);
+    padding          : var(--cookienotice-button-padding-vertical) var(--cookienotice-button-padding-horizontal);
+
+    background-color : var(--color-negative-background);
+    color            : var(--color-negative);
+    font-size        : var(--cookienotice-button-font-size);
+    border-radius    : var(--cookienotice-border-radius);
+}
+
+#settings-reset:hover {
+    cursor : pointer;
+}

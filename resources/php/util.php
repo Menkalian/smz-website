@@ -51,6 +51,24 @@
 
     function settings_menu()
     {
+        echo "<div id='settings'>";
+        echo "<p>In diesen Einstellungen können Sie Ihre Cookie-Präferenzen ändern.</p>";
+
+        // Create Sliders
+        echo "<ul><li>";
+        create_slider("settings-essential", "Notwendige Cookies", true, false);
+        echo "</li><li>";
+        create_slider("settings-facebook", "(externe) Facebook Cookies", true);
+        echo "</li></ul>";
+
+        // Buttons
+        echo "<div id='settings-buttons'>
+                <div></div>
+                <button id='settings-reset'>Änderungen verwerfen</button>
+                <button id='settings-accept'>Änderungen anwenden</button>
+              </div>";
+
+        echo "</div>";
 
     }
 
