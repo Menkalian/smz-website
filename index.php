@@ -56,6 +56,9 @@
         <p>Wir sind auch <a href="https://www.facebook.com/SpielmannszugFrammersbach"> auf Facebook</a>.
            Hier wird eine Vorschau unserer Seite angezeigt, falls Facebook Cookies akzeptiert wurden.</p>
     </div>
+
+    <h1>Unsere Förderer</h1>
+    <img src="resources/images/content/image_gallery/foerderer/Foerderlogo_RbMSP.jpg" alt="Raiffeisenbank Main-Spessart eG">
 </div>
 </body>
 </html>
